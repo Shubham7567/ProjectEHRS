@@ -9,11 +9,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.lang.model.*;
-import javax.lang.model.element.Element;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPath;git
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
@@ -39,7 +38,8 @@ public class UserService implements IUserService {
             {
                 return false;
             }
-            
+            var element = xmlDocument.createElement("Employee");
+
         }
         catch(Exception ex)
         {
@@ -84,7 +84,7 @@ public class UserService implements IUserService {
             XPath xPath = XPathFactory.newInstance().newXPath();
             String expression = "/Patients/Patient[@PhoneNo='" + phoneNo+ "' && @Name='" + name +"']/PatientId";
             
-            if(xPath.compile(expression).evaluate(xmlDocument) == null)
+            if(xPath.compile(expression).evaluate(xmlDocument) != null)
             {
                 id = Integer.parseInt(xPath.compile(expression).evaluate(xmlDocument));
             }
