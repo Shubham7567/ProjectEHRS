@@ -1,9 +1,9 @@
 package Models;
 
 import java.io.*;
-import java.util.jar.Attributes.Name;
 
-public class DoctorModel{
+
+public class DoctorModel implements Serializable{
     private int doctorid;
     private String Name;
     private String speciality;

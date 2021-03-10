@@ -2,15 +2,19 @@ package Server;
 
 import java.rmi.*;
 import java.rmi.server.*;
+import Models.*;
+import Services.UserService;
 
 public class EHRRemote extends UnicastRemoteObject implements RemoteStub
 {
+    UserService service = new UserService();
     public EHRRemote() throws RemoteException
     {
         super();
     }
-    public void test(String message)
+    
+    public boolean SetDoctor(DoctorModel model)
     {
-        System.out.println("Message from remote: " + message);
+        return service.RegisterDoctor(model);
     }
 }

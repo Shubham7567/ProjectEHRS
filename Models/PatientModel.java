@@ -2,7 +2,7 @@ package Models;
 
 import java.io.*;
 
-public class PatientModel
+public class PatientModel implements Serializable
 {
 	private int PatientId;
 	private String Name;
