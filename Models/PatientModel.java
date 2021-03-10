@@ -1,14 +1,14 @@
-package EHRS.Models;
+package Models;
 
 import java.io.*;
 
-class PatientModel
+public class PatientModel
 {
 	private int PatientId;
 	private String Name;
 	private String Gender;
 	private String Address;
-	private String Age;
+	private int Age;
 	private String PhoneNumber;
 	
 	public void setPatientId(int PatientId)
@@ -51,12 +51,12 @@ class PatientModel
 		return Address;
 	}
 	
-	public void setAge(String Age)
+	public void setAge(int Age)
 	{
 		this.Age = Age;
 	}
 	
-	public String getAge()
+	public int getAge()
 	{
 		return Age;
 	}

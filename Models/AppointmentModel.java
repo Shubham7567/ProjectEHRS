@@ -1,4 +1,4 @@
-package EHRS.Models;
+package Models;
 
 import java.io.*;
 

@@ -1,9 +1,9 @@
-package EHRS.Models;
+package Models;
 
 import java.io.*;
 import java.util.jar.Attributes.Name;
 
-class DoctorModel{
+public class DoctorModel{
     private int doctorid;
     private String Name;
     private String speciality;

@@ -1,4 +1,4 @@
-package EHRS.Server;
+package Server;
 
 import java.io.*;
 import java.net.*;
