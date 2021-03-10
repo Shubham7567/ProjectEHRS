@@ -9,8 +9,8 @@ public class EHRClient {
         try{
             Scanner sc = new Scanner(System.in);
             RemoteStub stub = (RemoteStub) Naming.lookup("rmi://localhost:5000/mcaiv");
+            
             String message = sc.next();
-            stub.test(message);
         }
         catch(Exception ex)
         {
